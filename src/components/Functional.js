@@ -1,4 +1,4 @@
-export { togglePopUp, fixNavbar, headerMovement };
+export { togglePopUp, fixNavbar, headerMovement, scrollMain };
 
 /* PopUp */
 function togglePopUp() {
@@ -23,4 +23,10 @@ function headerMovement() {
     let top = Math.floor(window.scrollY / 3);
     img.style.backgroundPositionY = `${top}px`;
   });
+}
+
+/* */
+
+function scrollMain() {
+  // window.scrollY = 200;
 }

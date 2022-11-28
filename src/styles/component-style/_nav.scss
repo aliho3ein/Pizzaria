@@ -39,14 +39,17 @@
     font: 1.5rem $fantasy-font;
 
     li {
-      cursor: pointer;
-      color: $text-color;
-      transition: all 200ms;
-      text-shadow: 0 0 5px #ccc;
+      a {
+        cursor: pointer;
+        text-shadow: 0 0 5px #ccc;
+        transition: all 200ms;
+        color: $text-color;
+        text-decoration: none;
 
-      &:hover {
-        color: $secondary-color;
-        text-shadow: 0 0 5px #333;
+        &:hover {
+          color: $secondary-color;
+          text-shadow: 0 0 5px #333;
+        }
       }
 
       &:after {

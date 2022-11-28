@@ -10,16 +10,22 @@ import MainNav from "./main-components/nav";
 import Content from "./main-components/content";
 import Footer from "./main-components/footer";
 
+import { useRef } from "react";
+
 function App() {
+  let toMain = useRef(null);
+  let toTop = useRef(null);
+  let toBottom = useRef(null);
+
   useEffect(() => {}, []);
 
   return (
     <>
       <PopUp />
-      <Header />
-      <MainNav />
-      <Content />
-      <Footer />
+      <Header scroll={toTop} />
+      <MainNav scroll={{ toMain, toTop, toBottom }} />
+      <Content scroll={toMain} />
+      <Footer scroll={toBottom} />
     </>
   );
 }

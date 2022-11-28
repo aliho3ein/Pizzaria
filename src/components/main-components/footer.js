@@ -1,6 +1,6 @@
-export default function Footer() {
+export default function Footer({ scroll }) {
   return (
-    <footer id="pzFooter">
+    <footer id="pzFooter" ref={scroll}>
       <div className="footerInfo">
         <h2>Kontakt uns</h2>
         <ul>

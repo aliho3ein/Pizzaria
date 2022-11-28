@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function category() {
+export default function Category() {
+  const Nav = useNavigate();
+
+  let linkTo = (page) => {
+    Nav(`/${page}`);
+  };
+
   return (
     <div className="pzCategory">
-      <div className="pzCategory-item catPizza">
+      <div className="pzCategory-item catPizza" onClick={() => linkTo("pizza")}>
         <div className="itemName">Pizza</div>
       </div>
       <div className="pzCategory-item catPasta">

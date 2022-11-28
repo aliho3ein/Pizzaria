@@ -4,9 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import Category from "./category";
 import Pizza from "./pizza-area";
 
-export default function Content() {
+export default function Content({ scroll }) {
   return (
-    <main id="pzContent">
+    <main id="pzContent" ref={scroll}>
       <div className="redMask">
         <img
           src="./image/main-style-img/Pizza_Italia_Red_Rectangle.jpg"
