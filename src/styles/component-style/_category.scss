@@ -1,0 +1,113 @@
+.pzCategory {
+  width: 70%;
+  height: 800px;
+  margin-block: 200px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template-areas: "pasta pasta drink" "dessert off drink" "dessert pizza pizza";
+  gap: 5px;
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  background-image: radial-gradient(
+    circle,
+    #000000,
+    #353535,
+    #a3a3a3,
+    #e0e0e0,
+    #e0e0e0
+  );
+  //   border: 5px solid $category-color;
+
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    font: 2rem $fantasy-font;
+    color: $text-color;
+    filter: grayscale(30%);
+    transition: filter 300ms ease-out;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+
+    .itemName {
+      background: linear-gradient(
+        to left,
+        transparent,
+        rgb(0 0 0 / 0.7),
+        transparent
+      );
+      padding: 1px 45px;
+    }
+  }
+
+  .catPizza {
+    grid-area: pizza;
+    background-image: url(https://realfood.tesco.com/media/images/1400x919-MargaritaPizza-555a4065-2573-4b41-bcf3-7193cd095d8f-0-1400x919.jpg);
+  }
+  .catPasta {
+    grid-area: pasta;
+    background-image: url(https://www.eat-this.org/wp-content/uploads/2021/10/eat_this_one-pot-kuerbis-pasta_mit_veganer_chorizo-003.jpg);
+  }
+  .catDessert {
+    grid-area: dessert;
+    background-image: url(https://www.ihr-wellness-magazin.de/fileadmin/_processed_/4/f/csm_50_low-carb-tiramisu-dessert_bs_168066176_800_fb22ad5e84.jpg);
+  }
+  .catDrink {
+    grid-area: drink;
+    background-image: url(https://imbibemagazine.com/wp-content/uploads/2022/10/holiday-drinks-crimson-sour-v2-crdt-john-valls.jpg);
+  }
+  .catOff {
+    grid-area: off;
+    background: radial-gradient(transparent, transparent, rgb(0 0 0 /0.6)),
+      center / cover url(./../../public/image/neon.jpg);
+    animation: neon 6000ms cubic-bezier(0.28, -0.7, 0.58, 1.71) 200ms infinite
+      reverse;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+/* Neon Animation */
+@keyframes neon {
+  0% {
+    filter: grayscale(15%);
+  }
+  20% {
+    filter: grayscale(0%);
+  }
+
+  40% {
+    filter: grayscale(15%);
+  }
+
+  60% {
+    filter: grayscale(0%);
+  }
+  69% {
+    filter: grayscale(5%);
+  }
+  70% {
+    filter: grayscale(80%);
+  }
+  72% {
+    filter: grayscale(10%);
+  }
+  74% {
+    filter: grayscale(80%);
+  }
+  79% {
+    filter: grayscale(10%);
+  }
+  90% {
+    filter: grayscale(0%);
+  }
+  100% {
+    filter: grayscale(15%);
+  }
+}

@@ -1,0 +1,78 @@
+#pzFooter {
+  height: 400px;
+  width: 100vw;
+  background: top / cover url(./../../public/image/footer.png) no-repeat;
+  clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 100%);
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ccc;
+  user-select: none;
+
+  > div {
+    flex-basis: 30%;
+    line-height: 2rem;
+  }
+
+  .footerInfo {
+    ul {
+      padding: 5px 20px;
+      list-style-type: none;
+
+      li:before {
+        content: "";
+        margin-right: 10px;
+        font: var(--fa-font-solid);
+      }
+
+      li:nth-child(1):before {
+        content: "\f015  ";
+      }
+
+      li:nth-child(2):before {
+        content: "\f098  ";
+      }
+
+      li:nth-child(3):before {
+        content: "\f0e0  ";
+      }
+    }
+  }
+  .footerMap {
+    h2 {
+      text-align: center;
+      padding: 5px;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .footerSocial {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 70%;
+    align-self: flex-end;
+    padding-bottom: 10px;
+
+    i {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 200ms;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    span {
+      width: 100%;
+      margin-top: auto;
+      display: block;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="./public/image/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div class="pzPopUp disNone">
+      <div class="Rechnung base disNone">
+        <div class="part1"></div>
+        <div class="part2"></div>
+        <div class="part3"></div>
+        <div class="part4"></div>
+        <div class="part5"></div>
+        <div class="part6"></div>
+        <div class="part7"></div>
+        <div class="part8"></div>
+        <div class="part9"></div>
+        <div class="part10"></div>
+        <div class="part11"></div>
+        <div class="part12"></div>
+        <div class="part13"></div>
+        <div class="part14"></div>
+        <div class="part15"></div>
+        <div class="part16"></div>
+        <div class="part17"></div>
+        <div class="part18"></div>
+        <div class="part19"></div>
+        <div class="part20"></div>
+        <div class="part21"></div>
+        <div class="part22"></div>
+        <div class="part23"></div>
+        <div class="part24"></div>
+        <div class="part25"></div>
+      </div>
+
+      <!-- Kasse -->
+      <div class="castArea">
+        <i class="fa fa-xmark closePopUp" onclick="togglePopUp()"></i>
+        <div class="castItems">
+          <!--  -->
+          <div class="caItem">
+            <h2><i class="fa fa-xmark"></i>margarita</h2>
+            <p>
+              <i class="fa fa-minus"></i>
+              <span>1 x </span>
+              14
+              <span>,59</span>
+              <i class="fa fa-plus"></i>
+            </p>
+          </div>
+          <div class="caItem">
+            <h2><i class="fa fa-xmark"></i>Beef</h2>
+            <p>
+              <i class="fa fa-minus"></i>
+              <span>1 x </span>
+              14
+              <span>,59</span>
+              <i class="fa fa-plus"></i>
+            </p>
+          </div>
+          <div class="caItem">
+            <h2><i class="fa fa-xmark"></i>Hawaii</h2>
+            <p>
+              <i class="fa fa-minus"></i>
+              <span>1 x </span>
+              14
+              <span>,59</span>
+              <i class="fa fa-plus"></i>
+            </p>
+          </div>
+          <div class="caItem">
+            <h2><i class="fa fa-xmark"></i>Casper</h2>
+            <p>
+              <i class="fa fa-minus"></i>
+              <span>1 x </span>
+              14
+              <span>,59</span>
+              <i class="fa fa-plus"></i>
+            </p>
+          </div>
+        </div>
+        <div class="castTotal">Total : <span>89,42</span></div>
+        <div class="castBuy" onclick="bz()">Bezahlen</div>
+      </div>
+    </div>
+
+    <header id="pzHeader"></header>
+    <!-- Navigation -->
+    <nav class="pzNav">
+      <ul>
+        <li class="navItem">Menü</li>
+        <li>Bewertung</li>
+        <li>Kontakt</li>
+        <li>Aktion</li>
+      </ul>
+      <img src="./public/image/logo.png" alt="Logo" class="pzNav-logo" />
+      <i class="fa fa-cart-plus" title="Kasse" onclick="togglePopUp()">
+        <h2>5</h2>
+      </i>
+      <!-- <i class="fa fa-user" title="Login"></i> -->
+    </nav>
+
+    <main id="pzContent">
+      <div class="redMask">
+        <img
+          src="public/image/main-style-img/Pizza_Italia_Red_Rectangle.jpg"
+          alt="Red mask"
+        />
+      </div>
+      <div class="whiteStyle"></div>
+
+      <!-- Category -->
+      <div class="pzCategory">
+        <div class="pzCategory-item catPizza">
+          <div class="itemName">Pizza</div>
+        </div>
+        <div class="pzCategory-item catPasta">
+          <div class="itemName">Pasta</div>
+        </div>
+        <div class="pzCategory-item catDessert">
+          <div class="itemName">Nachspeisen</div>
+        </div>
+        <div class="pzCategory-item catDrink">
+          <div class="itemName">Getränke</div>
+        </div>
+        <div class="pzCategory-item catOff"></div>
+      </div>
+
+      <!-- Pizza Items -->
+
+      <div id="pizzaArea">
+        <!--  -->
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Margherita</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Hawaii</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Caprese</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">10<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Tuna</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Teriyaki Chicken</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">12<span>,59</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Dutchman</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">9<span>,89</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Bombay</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Sucuk Hollandaise</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Salami Supreme</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Lucifer</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Conchita</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <div class="pizzaItem">
+          <div class="pizzaItemInfo">
+            <span>Beef & Veggies</span>
+            <ul>
+              <li>Lorem, ipsum dolor. consectetur</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem, ipsum.</li>
+              <li>Lorem ipsum dolor sit amet, adipisicing elit.</li>
+            </ul>
+          </div>
+          <div class="pizzaItemPic"></div>
+          <div class="pizzaItemBtn">14<span>,99</span></div>
+        </div>
+
+        <!--  -->
+      </div>
+
+      <div class="footerRedMask"></div>
+    </main>
+
+    <footer id="pzFooter">
+      <div class="footerInfo">
+        <h2>Kontakt uns</h2>
+        <ul>
+          <li>Berliner str. 12 , 42586 Düsseldorf</li>
+          <li>+49 165 852 363</li>
+          <li>info@pizza-italian.de</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            impedit quidem atque expedita corporis quam quod eos? Repellat
+            quibusdam qui
+          </li>
+        </ul>
+      </div>
+      <div class="footerSocial">
+        <i class="fa-brands fa-square-facebook" title="FaceBook"></i>
+        <i class="fa-brands fa-instagram" title="Instagram"></i>
+        <i class="fa-brands fa-square-twitter" title="Twitter"></i>
+        <span>copyright &copy; 2022 - aliho3ein</span>
+      </div>
+      <div class="footerMap">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ducimus
+        laborum quia, pariatur modi doloribus, assumenda illum architecto
+        praesentium eos vitae veniam beatae ad placeat dolor fuga. Saepe,
+        tempora. Magnam. vitae veniam beatae ad placeat dolor fuga. Saepe,
+        tempora. Magnam. dolor sit amet consectetur adipisicing elit. Quaerat
+        ducimus laborum quia,
+      </div>
+    </footer>
+
+    <script>
+      /*Close PopUp*/
+      function togglePopUp() {
+        document.querySelector(".pzPopUp").classList.toggle("disNone");
+        document.querySelector(".castArea").classList.toggle("castEffect");
+      }
+
+      /* Header Image*/
+      const img = document.getElementById("pzHeader");
+      window.addEventListener("scroll", (e) => {
+        let top = Math.floor(window.scrollY / 3);
+        img.style.backgroundPositionY = `${top}px`;
+      });
+
+      /*fix Nav*/
+      window.addEventListener("scroll", () => {
+        const Nav = document.querySelector(".pzNav");
+        window.scrollY >= 100
+          ? Nav.classList.add("fixNav")
+          : Nav.classList.remove("fixNav");
+      });
+
+      /**/
+    </script>
+  </body>
+</html>
