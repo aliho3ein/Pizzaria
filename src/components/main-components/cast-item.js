@@ -11,7 +11,7 @@ export default function CastItem(props) {
 
   /* Actions */
   let action = (data) => {
-    let plus = {
+    let thisItem = {
       id,
       name,
       contains,
@@ -20,23 +20,27 @@ export default function CastItem(props) {
       count,
     };
 
-    if (plus.count <= 1 && data === "min") {
+    if (thisItem.count <= 1 && data === "min") {
       data = "";
+    }
+    if (data === "delete") {
+      thisItem.count = 0;
     }
 
     switch (data) {
       case "plus":
-        plus.count++;
-        Dispatcher(updateItem(plus));
+        thisItem.count++;
+        Dispatcher(updateItem(thisItem));
         break;
 
       case "min":
-        plus.count--;
-        Dispatcher(updateItem(plus));
+        thisItem.count--;
+        Dispatcher(updateItem(thisItem));
         break;
 
+      /* delete */
       default:
-        Dispatcher(removeItem(id));
+        Dispatcher(removeItem(thisItem));
         break;
     }
   };
@@ -44,15 +48,27 @@ export default function CastItem(props) {
   return (
     <div className="caItem">
       <h2>
-        <i className="fa fa-xmark" onClick={action}></i>
+        <i
+          className="fa fa-trash-can"
+          title="Löschen"
+          onClick={() => action("delete")}
+        ></i>
         {name}
       </h2>
       <p>
-        <i className="fa fa-minus" onClick={() => action("min")}></i>
+        <i
+          className="fa fa-minus"
+          title="Minus"
+          onClick={() => action("min")}
+        ></i>
         <span>{count} x </span>
         {Price[0]}
         <span>,{Price[1]}</span>
-        <i className="fa fa-plus" onClick={() => action("plus")}></i>
+        <i
+          className="fa fa-plus"
+          title="Plus"
+          onClick={() => action("plus")}
+        ></i>
       </p>
     </div>
   );

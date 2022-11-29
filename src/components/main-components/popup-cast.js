@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 import CastItem from "./cast-item";
 
 export default function Cast() {
-  const items = useSelector((state) => {
-    return state.castReducer.items;
-  });
+  /* Get Data from Reducer */
+  const items = useSelector((state) => state.castReducer.items);
 
+  /* Split Cent and Euro */
   let EndPrice = 0;
   let getTotal = (num, count) => {
     let currency = num.split(",");
@@ -40,7 +40,7 @@ export default function Cast() {
           <div className="castBuy">Bezahlen</div>
         </>
       ) : (
-        <h2>WarenKorb ist leer</h2>
+        <span className="emptyCart">ihr Warenkorb ist leer</span>
       )}
     </div>
   );

@@ -1,9 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 /* */
 import { addItem, updateItem } from "./../../store/slices/cast";
 
 export default function PizzaItem(props) {
   const Dispatcher = useDispatch();
+
+  let castItems = useSelector((state) => state.castReducer.items);
 
   let { id, name, contains, price, image, count } = props.value;
 
@@ -16,17 +18,24 @@ export default function PizzaItem(props) {
   let currency = price.split(",");
 
   let addToCast = () => {
+    let exist = castItems.find((el) => el.id === id);
+
     let newItem = {
       id,
       name,
       contains,
       price,
       image,
-      count: ++count,
+      count,
     };
-    if (newItem.count === 1) {
+
+    if (!exist) {
+      newItem.count = 1;
       Dispatcher(addItem(newItem));
-    } else Dispatcher(updateItem(newItem));
+    } else {
+      newItem.count = exist.count + 1;
+      Dispatcher(updateItem(newItem));
+    }
   };
 
   return (
@@ -35,7 +44,10 @@ export default function PizzaItem(props) {
         <span>{name}</span>
         <ul>{elements}</ul>
       </div>
-      <div className="pizzaItemPic"></div>
+      <div
+        className="pizzaItemPic"
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
       <div className="pizzaItemBtn" onClick={addToCast}>
         {currency[0]}
         <span>,{currency[1]}</span>

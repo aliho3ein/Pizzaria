@@ -32,6 +32,7 @@
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
+  /* Empty Cast Style */
 }
 .pzPopUp .castArea {
   max-height: 70vh;
@@ -46,6 +47,11 @@
   justify-content: center;
   background: linear-gradient(-45deg, #bbb, white);
   padding: 30px 0;
+  box-shadow: 0 0 5px #fff;
+  /* Close Btn */
+  /* Items Info Area */
+  /* Total Price */
+  /* Checkout Btn */
 }
 .pzPopUp .castArea .closePopUp {
   position: absolute;
@@ -58,33 +64,41 @@
   color: #ea2027;
 }
 .pzPopUp .castArea .castItems {
-  width: 90%;
+  width: 80%;
   max-height: 600px;
-  padding: 10px 20px;
+  padding-inline: 20px;
   flex-grow: 2;
   overflow: scroll;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #eee;
+  border-left-color: #ccc;
+  border-bottom: 0;
+  /* single Item Info */
 }
 .pzPopUp .castArea .castItems .caItem {
-  padding: 10px;
-  width: 90%;
+  padding: 20px 10px;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.1rem;
   border-bottom: 1px solid #ccc;
+  /* Item Name */
+  /* Price and minus , plus Btn */
 }
 .pzPopUp .castArea .castItems .caItem h2 {
   font-size: 1.3rem;
+  /* Delete Btn */
 }
 .pzPopUp .castArea .castItems .caItem h2 > i {
   font-size: 0.7rem;
   color: transparent;
-  vertical-align: middle;
-  margin-left: -20px;
-  padding-right: 10px;
+  vertical-align: 2px;
+  padding-right: 15px;
+  margin-left: -10px;
   cursor: pointer;
   transition: color 200ms;
 }
@@ -92,13 +106,13 @@
   color: #ea2027 !important;
 }
 .pzPopUp .castArea .castItems .caItem:hover h2 i {
-  color: #000;
+  color: #bbb;
 }
-.pzPopUp .castArea .castItems .caItem:hover p i {
-  display: inline-block;
+.pzPopUp .castArea .castItems .caItem p {
+  margin-right: -15px;
 }
 .pzPopUp .castArea .castItems .caItem p span {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .pzPopUp .castArea .castItems .caItem p span:nth-child(2) {
   color: #555;
@@ -108,17 +122,24 @@
 }
 .pzPopUp .castArea .castItems .caItem p i {
   font-size: 0.8rem;
-  padding: 3px 5px;
+  padding: 4px 5px;
   margin-inline: 10px;
   background-color: #555;
   border-radius: 50%;
-  color: #eee;
   cursor: pointer;
-  transition: all 300ms ease;
-  display: none;
+  transition: all 100ms;
+  background-color: transparent;
+  color: transparent;
 }
-.pzPopUp .castArea .castItems .caItem p i:hover {
+.pzPopUp .castArea .castItems .caItem p i:nth-child(1):hover {
   color: #ea2027;
+}
+.pzPopUp .castArea .castItems .caItem p i.fa-plus:hover {
+  color: #009432;
+}
+.pzPopUp .castArea .castItems .caItem:hover p i {
+  background-color: #999;
+  color: #fff;
 }
 .pzPopUp .castArea .castItems .caItem:last-child {
   border-bottom: none !important;
@@ -131,6 +152,7 @@
   border-top: 2px solid gray;
   display: flex;
   justify-content: space-between;
+  font-size: 1.4rem;
 }
 .pzPopUp .castArea .castTotal > span:before {
   content: "€ ";
@@ -152,6 +174,18 @@
 .pzPopUp .castEffect {
   transform: translateY(0px);
   transition: all 1000ms;
+}
+.pzPopUp .emptyCart {
+  color: #bbb;
+  font-size: 2rem;
+}
+.pzPopUp .emptyCart:before {
+  content: "\f07a";
+  display: block;
+  text-align: center;
+  font: var(--fa-font-solid);
+  font-size: 5rem;
+  padding-block: 1rem;
 }
 
 /* ------------------------ Rechnung Effect ------------ */
@@ -670,6 +704,7 @@ div[class*=part] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  /* Single Item */
 }
 #pizzaArea .pizzaItem {
   height: 230px;
@@ -684,6 +719,9 @@ div[class*=part] {
   overflow: hidden;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+  /* Name & Information */
+  /* Green Btn */
+  /* Pizza Image */
 }
 #pizzaArea .pizzaItem .pizzaItemInfo {
   display: block;
@@ -720,15 +758,20 @@ div[class*=part] {
   left: 50px;
   border-radius: 5px;
   transition: filter 300ms ease;
+  box-shadow: 0 0 5px #333;
+  /* Currency Sign */
 }
 #pizzaArea .pizzaItem .pizzaItemBtn:hover {
   filter: brightness(1.2);
+}
+#pizzaArea .pizzaItem .pizzaItemBtn:active {
+  background: linear-gradient(to left top, #009432, #2a7c33, #346534, #374f34, #353934);
 }
 #pizzaArea .pizzaItem .pizzaItemBtn span {
   font-size: 0.8rem;
   vertical-align: top;
 }
-#pizzaArea .pizzaItem .pizzaItemBtn::after {
+#pizzaArea .pizzaItem .pizzaItemBtn:after {
   content: " \f153";
   display: inline;
   font: var(--fa-font-solid);
@@ -756,59 +799,31 @@ div[class*=part] {
 }
 #pizzaArea .pizzaItem:nth-child(1) .pizzaItemPic {
   background-size: 115%;
-  background-image: url(./../../public/image/pizza/magherita.png);
 }
 #pizzaArea .pizzaItem:nth-child(2) .pizzaItemPic {
   background-size: 101%;
-  background-image: url(./../../public/image/pizza/hawai.png);
-}
-#pizzaArea .pizzaItem:nth-child(3) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/con.png);
-}
-#pizzaArea .pizzaItem:nth-child(4) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/tunn.png);
-}
-#pizzaArea .pizzaItem:nth-child(5) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/beff.png);
 }
 #pizzaArea .pizzaItem:nth-child(6) .pizzaItemPic {
   background-size: 103%;
-  background-image: url(./../../public/image/pizza/dutch.png);
-}
-#pizzaArea .pizzaItem:nth-child(7) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/bombay.png);
 }
 #pizzaArea .pizzaItem:nth-child(8) .pizzaItemPic {
   background-size: 103%;
-  background-image: url(./../../public/image/pizza/sucuk.png);
-}
-#pizzaArea .pizzaItem:nth-child(9) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/con.png);
-}
-#pizzaArea .pizzaItem:nth-child(10) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/lucifer.png);
-}
-#pizzaArea .pizzaItem:nth-child(11) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/beff.png);
-}
-#pizzaArea .pizzaItem:nth-child(12) .pizzaItemPic {
-  background-image: url(./../../public/image/pizza/vegan.png);
 }
 
+/* Rotate Animation */
 @-webkit-keyframes pizzaRotate {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
-
 @keyframes pizzaRotate {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }

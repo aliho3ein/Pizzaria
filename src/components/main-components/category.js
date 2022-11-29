@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function Category() {
+export default function Category({ scroll }) {
   const Nav = useNavigate();
 
   let linkTo = (page) => {

@@ -14,13 +14,16 @@ const cast = createSlice({
       let updateItems = state.items.filter((item) => {
         return item.id !== payload.id;
       });
-
       let order = [...updateItems, payload];
       state.items = order.sort(compare);
     },
     removeItem: (state, { payload }) => {
+      state.items.forEach((el) => {
+        if (el.id === payload.id) el = payload;
+      });
+
       let updateItems = state.items.filter((item) => {
-        return item.id !== payload;
+        return item.id !== payload.id;
       });
       state.items = updateItems;
     },

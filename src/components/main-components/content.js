@@ -16,7 +16,7 @@ export default function Content({ scroll }) {
       <div className="whiteStyle"></div>
 
       <Routes>
-        <Route path="/" element={<Category />} />
+        <Route path="/" element={<Category scroll={scroll} />} />
         <Route path="/pizza" element={<Pizza />} />
         <Route path="/pasta" element={<Pizza />} />
         <Route path="/drink" element={<Pizza />} />

@@ -7,8 +7,13 @@ import { togglePopUp, fixNavbar } from "./../Functional";
 export default function MainNav({ scroll }) {
   let { toTop, toMain, toBottom } = scroll;
 
-  let num = useSelector((state) => {
-    return state.castReducer.items.length;
+  let items = useSelector((state) => {
+    return state.castReducer.items;
+  });
+
+  let num = 0;
+  items.forEach((element) => {
+    num += element.count;
   });
 
   useEffect(() => {

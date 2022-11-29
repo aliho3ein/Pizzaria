@@ -7,7 +7,7 @@ let pizzaItems = [
     contains:
       "mit extra Mozzarella , Enthält glutenhaltiges Getreide , Enthält Weizen , enthält eine Phenylalanin - Quelle ",
     price: "8,99",
-    image: "",
+    image: "./image/pizza/magherita.png",
     count: 0,
   },
   {
@@ -16,7 +16,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit Hähnchenbrustfilet, Ananas und Broccoli , frischen Champignons und feurigen",
     price: "12,49",
-    image: "",
+    image: "./image/pizza/hawai.png",
     count: 0,
   },
   {
@@ -25,7 +25,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit frischen Tomaten, Mozzarella Kugelng und Basilikum-Pestod",
     price: "11,49",
-    image: "",
+    image: "./image/pizza/con.png",
     count: 0,
   },
   {
@@ -34,7 +34,7 @@ let pizzaItems = [
     contains:
       "mit extra Mozzarella  , mit extra viel Thunfischc , roten Zwiebeln ,Enthält glutenhaltiges Getreide",
     price: "10,99",
-    image: "",
+    image: "./image/pizza/tunn.png",
     count: 0,
   },
   {
@@ -43,7 +43,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit frischen Champignons , Basilikum-Pestod und extra Mozzarella , Enthält Cashewkerne",
     price: "13,49",
-    image: "",
+    image: "./image/pizza/beff.png",
     count: 0,
   },
   {
@@ -52,7 +52,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit Prosciutto cotto , Fruchtiger Ananas und extra viel Käse.",
     price: "15,49",
-    image: "",
+    image: "./image/pizza/dutch.png",
     count: 0,
   },
   {
@@ -61,7 +61,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit Hähnchenbrustfilet, Currysaucei und Broccoli , frischen Champignons und feurigen",
     price: "8,99",
-    image: "",
+    image: "./image/pizza/bombay.png",
     count: 0,
   },
   {
@@ -70,7 +70,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit würziger Sucuk , roten Zwiebeln Tomaten und Sauce Hollandaiseg , gebacken Bacon ",
     price: "11,49",
-    image: "",
+    image: "./image/pizza/sucuk.png",
     count: 0,
   },
   {
@@ -79,7 +79,7 @@ let pizzaItems = [
     contains:
       "mit extra Mozzarella  , leckerer Salami, mit Geschmacksverstärker,  Enthält Cashewkerne",
     price: "9,99",
-    image: "",
+    image: "./image/pizza/con.png",
     count: 0,
   },
   {
@@ -88,7 +88,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit Chilisalami , frischen Champignons und feurigen , rot-grünen Jalapeños(Scharf)",
     price: "11,99",
-    image: "",
+    image: "./image/pizza/lucifer.png",
     count: 0,
   },
   {
@@ -97,7 +97,7 @@ let pizzaItems = [
     contains:
       "Teiga und Mozzarellag , mit BBQ-Sauce , Rinderhackg und Bacon, roten Zwiebeln und Mozzarella-Kugelng",
     price: "12,49",
-    image: "",
+    image: "./image/pizza/beff.png",
     count: 0,
   },
   {
@@ -106,7 +106,7 @@ let pizzaItems = [
     contains:
       "mit extra Mozzarella , consectetur Lorem , mit Chilisalami , frischen Champignons und feurigen ",
     price: "14,99",
-    image: "",
+    image: "./image/pizza/vegan.png",
     count: 0,
   },
 ];

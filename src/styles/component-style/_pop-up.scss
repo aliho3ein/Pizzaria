@@ -24,7 +24,9 @@
     justify-content: center;
     background: linear-gradient(-45deg, #bbb, #ffff);
     padding: 30px 0;
+    box-shadow: 0 0 5px #fff;
 
+    /* Close Btn */
     .closePopUp {
       position: absolute;
       top: 15px;
@@ -37,34 +39,42 @@
       }
     }
 
+    /* Items Info Area */
     .castItems {
-      width: 90%;
+      width: 80%;
       max-height: 600px;
-      padding: 10px 20px;
+      padding-inline: 20px;
       flex-grow: 2;
       overflow: scroll;
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
+      justify-content: flex-start;
+      border: 1px solid #eee;
+      border-left-color: #ccc;
+      border-bottom: 0;
 
+      /* single Item Info */
       .caItem {
-        padding: 10px;
-        width: 90%;
+        padding: 20px 10px;
+        width: 95%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-size: 1.1rem;
         border-bottom: 1px solid #ccc;
 
+        /* Item Name */
         h2 {
           font-size: 1.3rem;
 
+          /* Delete Btn */
           > i {
             font-size: 0.7rem;
             color: transparent;
-            vertical-align: middle;
-            margin-left: -20px;
-            padding-right: 10px;
+            vertical-align: 2px;
+            padding-right: 15px;
+            margin-left: -10px;
             cursor: pointer;
             transition: color 200ms;
 
@@ -75,16 +85,14 @@
         }
 
         &:hover h2 i {
-          color: #000;
+          color: #bbb;
         }
 
-        &:hover p i {
-          display: inline-block;
-        }
-
+        /* Price and minus , plus Btn */
         p {
+          margin-right: -15px;
           span {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             &:nth-child(2) {
               color: #555;
             }
@@ -95,19 +103,27 @@
 
           i {
             font-size: 0.8rem;
-            padding: 3px 5px;
+            padding: 4px 5px;
             margin-inline: 10px;
             background-color: #555;
             border-radius: 50%;
-            color: #eee;
             cursor: pointer;
-            transition: all 300ms ease;
-            display: none;
+            transition: all 100ms;
+            background-color: transparent;
+            color: transparent;
 
-            &:hover {
+            &:nth-child(1):hover {
               color: $primary-color;
             }
+            &.fa-plus:hover {
+              color: $secondary-color;
+            }
           }
+        }
+
+        &:hover p i {
+          background-color: #999;
+          color: #fff;
         }
 
         &:last-child {
@@ -116,6 +132,7 @@
       }
     }
 
+    /* Total Price */
     .castTotal {
       width: 50%;
       min-width: 300px;
@@ -124,6 +141,7 @@
       border-top: 2px solid gray;
       display: flex;
       justify-content: space-between;
+      font-size: 1.4rem;
 
       > span:before {
         content: "€ ";
@@ -134,6 +152,7 @@
       }
     }
 
+    /* Checkout Btn */
     .castBuy {
       padding: 10px 25px;
       border-radius: 5px;
@@ -151,6 +170,21 @@
   .castEffect {
     transform: translateY(0px);
     transition: all 1000ms;
+  }
+
+  /* Empty Cast Style */
+  .emptyCart {
+    color: #bbb;
+    font-size: 2rem;
+
+    &:before {
+      content: "\f07a";
+      display: block;
+      text-align: center;
+      font: var(--fa-font-solid);
+      font-size: 5rem;
+      padding-block: 1rem;
+    }
   }
 }
 
