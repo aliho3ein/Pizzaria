@@ -1,4 +1,5 @@
 import PizzaItem from "./pizza-item";
+import { useEffect, useState } from "react";
 
 let pizzaItems = [
   {
@@ -111,10 +112,16 @@ let pizzaItems = [
   },
 ];
 
-export default function Pizza() {
+export default function Pizza({ loader }) {
+  /* Loading */
+  let [loading, setLoading] = useState();
+  useEffect(() => {
+    setTimeout(() => setLoading(true), 1500);
+  }, []);
+
   let PizzaList = pizzaItems.map((item, index) => {
     return <PizzaItem key={index} value={item} />;
   });
 
-  return <div id="pizzaArea">{PizzaList}</div>;
+  return !loading ? loader : <div id="pizzaArea">{PizzaList}</div>;
 }

@@ -37,10 +37,15 @@ export default function Cast() {
               <span>,{[pr[1]].splice(0, 2)}</span>
             </span>
           </div>
-          <div className="castBuy">Bezahlen</div>
+          <div
+            className="castBuy"
+            title="Eine Zahlung ist derzeit nicht möglich"
+          >
+            Bezahlen
+          </div>
         </>
       ) : (
-        <span className="emptyCart">ihr Warenkorb ist leer</span>
+        <span className="emptyCart">Ihr Warenkorb ist leer</span>
       )}
     </div>
   );

@@ -1,4 +1,4 @@
-#pizzaArea {
+#drinkArea {
   width: 80vw;
   margin-block: 200px;
   display: flex;
@@ -8,23 +8,20 @@
   gap: 80px;
   user-select: none;
 
-  /* Single Item */
-  .pizzaItem {
+  .drinkItem {
     height: 230px;
-    width: 45%;
-    min-width: 600px;
+    width: 25%;
+    min-width: 300px;
     position: relative;
     padding: 20px;
-    cursor: pointer;
     font-size: 0.9rem;
     color: #888;
     border-radius: 11px;
     overflow: hidden;
-    background: $menu-item;
+    background: linear-gradient(145deg, #fff, #cfcdcd);
     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 
-    /* Name & Information */
-    .pizzaItemInfo {
+    .drinkItemInfo {
       display: block;
       span {
         font: 2rem $fantasy-font;
@@ -39,11 +36,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
       ul {
+        padding-top: 5px;
         list-style-type: none;
         padding-left: 20px;
         line-height: 1.5rem;
+        width: 60%;
 
         li:before {
           content: "\f067    ";
@@ -54,9 +52,8 @@
     }
 
     /* Green Btn */
-    .pizzaItemBtn {
+    .drinkItemBtn {
       width: 25%;
-      min-width: 100px;
       text-align: center;
       padding: 5px;
       background: $secondary-gradient;
@@ -68,6 +65,7 @@
       border-radius: 5px;
       transition: filter 300ms ease;
       box-shadow: 0 0 5px #333;
+      cursor: pointer;
       font: 1.2rem $number-font;
 
       &:hover {
@@ -99,49 +97,24 @@
       }
     }
 
-    /* Pizza Image */
-    .pizzaItemPic {
-      width: 210px;
-      aspect-ratio: 1;
+    /* drink Image */
+    .drinkItemPic {
+      width: 110px;
+      height: 90%;
       position: absolute;
-      right: -80px;
+      right: 0px;
       top: 0;
       bottom: 0;
       margin-block: auto;
-      border-radius: 50%;
-      background-size: 100%;
+      background-size: 60%;
       background-repeat: no-repeat;
       background-position: center;
-      transition: right 600ms cubic-bezier(0.1, 1.1, 0.67, 1.41);
-      box-shadow: 0 0 15px #666, inset 0 0 10px #333;
+      filter: drop-shadow(0 0 5px #555);
+      -webkit-filter: drop-shadow(0 0 5px #555);
+      transition: all 600ms cubic-bezier(0.1, 1.1, 0.67, 1.41);
     }
-
-    &:hover .pizzaItemPic {
-      right: 10px;
-      animation: pizzaRotate 90s infinite;
+    &:hover .drinkItemPic {
+      transform: scale(1.1);
     }
-
-    &:nth-child(1) .pizzaItemPic {
-      background-size: 115%;
-    }
-    &:nth-child(2) .pizzaItemPic {
-      background-size: 101%;
-    }
-    &:nth-child(6) .pizzaItemPic {
-      background-size: 103%;
-    }
-    &:nth-child(8) .pizzaItemPic {
-      background-size: 103%;
-    }
-  }
-}
-
-/* Rotate Animation */
-@keyframes pizzaRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

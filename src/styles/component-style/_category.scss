@@ -15,7 +15,6 @@
     #e0e0e0,
     #e0e0e0
   );
-  //   border: 5px solid $category-color;
 
   &-item {
     display: flex;
@@ -54,6 +53,7 @@
   }
   .catDessert {
     grid-area: dessert;
+    cursor: not-allowed;
     background-image: url(https://www.ihr-wellness-magazin.de/fileadmin/_processed_/4/f/csm_50_low-carb-tiramisu-dessert_bs_168066176_800_fb22ad5e84.jpg);
   }
   .catDrink {

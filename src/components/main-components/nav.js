@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 /* functions */
-import { togglePopUp, fixNavbar } from "./../Functional";
+import { togglePopUp, fixNavbar, burgerNav } from "./../Functional";
 
 export default function MainNav({ scroll }) {
   let { toTop, toMain, toBottom } = scroll;
@@ -18,11 +18,15 @@ export default function MainNav({ scroll }) {
 
   useEffect(() => {
     fixNavbar();
+    burgerNav();
   }, []);
 
   return (
     <nav className="pzNav">
-      <ul>
+      <div className="burgerNav">
+        <span className="opNav"></span>
+      </div>
+      <ul className="pcNav mobileNav">
         <li>
           <Link to="/" onClick={() => toMain.current.scrollIntoView()}>
             Menü

@@ -3,10 +3,13 @@
 @import "./component-style/pop-up";
 @import "./component-style/header";
 @import "./component-style/nav";
+@import "./component-style/nav-burger";
 @import "./component-style/content";
 @import "./component-style/footer";
 @import "./component-style/category";
 @import "./component-style/pizza-item";
+@import "./component-style/drink-item";
+@import "./component-style/responsive";
 
 html {
   scroll-behavior: smooth;
@@ -16,4 +19,5 @@ body {
   background-color: $main-color;
   font-family: $main-font;
   user-select: none;
+  overflow-x: hidden;
 }

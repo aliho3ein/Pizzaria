@@ -20,6 +20,10 @@
       padding: 5px 20px;
       list-style-type: none;
 
+      li:nth-child(2) {
+        font: 0.9rem $number-font;
+      }
+
       li:before {
         content: "";
         margin-right: 10px;
@@ -31,6 +35,7 @@
       }
 
       li:nth-child(2):before {
+        font-size: 1.1rem;
         content: "\f098  ";
       }
 
@@ -48,6 +53,7 @@
       text-align: center;
     }
   }
+
   .footerSocial {
     display: flex;
     flex-flow: row wrap;

@@ -1,0 +1,117 @@
+/* Footer & Category */
+@media screen and (max-width: 1200px) {
+  .pzCategory {
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+      "pizza pasta" "pizza pasta" "off off" "off off" "drink dessert"
+      "drink dessert";
+    gap: 5px;
+  }
+
+  .footerMap {
+    display: none;
+  }
+}
+/* Footer */
+@media screen and (max-width: 1100px) {
+  .footerInfo {
+    display: none;
+  }
+}
+
+/* Navbar */
+@media screen and(min-width:951px) {
+  ul.pcNav {
+    display: flex !important;
+  }
+}
+
+/* NavBar */
+@media screen and (max-width: 950px) {
+  .pzNav {
+    padding: 0;
+
+    .burgerNav {
+      display: inline-block !important;
+      margin-left: 2%;
+    }
+
+    ul.pcNav {
+      display: none;
+    }
+
+    ul.mobileNav {
+      display: none;
+      flex-direction: column;
+      height: calc(100vh - 170px);
+      width: 100vw;
+      position: absolute;
+      background-color: rgba(0 0 0 /0.5);
+      backdrop-filter: blur(20px);
+      top: 70px;
+      margin-left: 0;
+      li {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .fixNav {
+    ul.pcNav {
+      height: calc(100vh - 50px);
+      top: 50px;
+    }
+  }
+}
+
+/* Content */
+@media screen and (max-width: 610px) {
+  #pizzaArea {
+    width: 100%;
+    .pizzaItem {
+      height: 350px;
+      width: 100%;
+      min-width: 0;
+
+      .pizzaItemInfo {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+
+      .pizzaItemPic {
+        position: static;
+        margin-inline: auto;
+        margin-top: -100px;
+      }
+
+      .pizzaItemBtn {
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+/** */
+@media screen and (max-width: 550px) {
+  .castArea {
+    width: 100% !important;
+    min-width: 0 !important;
+    border: 1px solid red;
+
+    .castItems {
+      width: 100% !important;
+    }
+  }
+
+  .pzCategory {
+    width: 100%;
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+      "pizza pizza" "pasta pasta" "off off" "off off" "drink drink"
+      "dessert dessert";
+    gap: 5px;
+  }
+}

@@ -103,7 +103,10 @@
     <header id="pzHeader"></header>
     <!-- Navigation -->
     <nav class="pzNav">
-      <ul>
+      <div class="burgerNav">
+        <span class="opNav xNav"></span>
+      </div>
+      <ul class="disNone">
         <li class="navItem">Menü</li>
         <li>Bewertung</li>
         <li>Kontakt</li>
@@ -374,6 +377,12 @@
       });
 
       /**/
+
+      document
+        .querySelector(".burgerNav")
+        .addEventListener("click", () =>
+          document.querySelector(".opNav").classList.toggle("xNav")
+        );
     </script>
   </body>
 </html>

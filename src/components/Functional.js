@@ -1,8 +1,11 @@
-export { togglePopUp, fixNavbar, headerMovement, scrollMain };
+import Aos from "aos";
+
+/* Export */
+export { togglePopUp, fixNavbar, headerMovement, aosEffect, burgerNav };
 
 /* PopUp */
 function togglePopUp() {
-  document.querySelector(".pzPopUp").classList.toggle("disNone");
+  document.querySelector(".pzPopUp").classList.toggle("popDown");
   document.querySelector(".castArea").classList.toggle("castEffect");
 }
 
@@ -16,6 +19,16 @@ function fixNavbar() {
   });
 }
 
+/* Burger Menu */
+let open = false;
+function burgerNav() {
+  let nav = document.querySelector(".mobileNav");
+  document.querySelector(".burgerNav").addEventListener("click", () => {
+    document.querySelector(".opNav").classList.toggle("xNav");
+    open ? (nav.style.display = "none") : (nav.style.display = "flex");
+    open = !open;
+  });
+}
 /* Header */
 function headerMovement() {
   const img = document.getElementById("pzHeader");
@@ -25,8 +38,7 @@ function headerMovement() {
   });
 }
 
-/* */
-
-function scrollMain() {
-  // window.scrollY = 200;
+/* aos Effect */
+function aosEffect() {
+  Aos.init();
 }
