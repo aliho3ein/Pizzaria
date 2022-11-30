@@ -8,7 +8,12 @@ Fast-food website mit online bestellung möglichkeit .
 
 - Photo-shop
 - Html , CSS - Sass
+  - Responsive
 - Javascript
 - React
   - Router
   - Redux - redux-toolkit
+
+---
+
+Live [version](https://pizzaria-de.netlify.app/)
